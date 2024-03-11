@@ -1,4 +1,4 @@
-rem bulk rename certain file extension in directory(inclue subfolder)
+rem bulk rename certain file extension in directory(include subfolder)
 @ECHO OFF
 PUSHD .
 FOR /R %%d IN (.) DO (
@@ -9,5 +9,8 @@ FOR /R %%d IN (.) DO (
 	IF EXIST *.prefab (
        REN *.prefab *.
     )
+	IF EXIST *.asset (
+       REN *.asset *.
+    )
 )
-POP
+rem POP
